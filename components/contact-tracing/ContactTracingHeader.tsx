@@ -8,7 +8,7 @@ const ContactTracingHeader = ({ setModalVisibility } : { setModalVisibility: any
         justifyContent="space-between"
         flexDir="row"
         alignItems="center"
-        pb={10}
+        pb={20}
         mt="xl">
             <Text
             fontWeight="900"
