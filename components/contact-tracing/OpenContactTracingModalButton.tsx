@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Icon, Modal } from "react-native-magnus"
+import { Button, Icon } from "react-native-magnus"
+import ContactTracingModal from './ContactTracingModal';
 
 const OpenContactTracingModalButton = () => {
     const [modalVisibility, setModalVisibility] = useState(false)
@@ -18,9 +19,9 @@ const OpenContactTracingModalButton = () => {
                 color="white"
                 />
             </Button>
-            <Modal isVisible={modalVisibility}>
-
-            </Modal>
+            <ContactTracingModal
+            modalVisibility={modalVisibility}
+            setModalVisibility={setModalVisibility} />
         </>
     )
 }
