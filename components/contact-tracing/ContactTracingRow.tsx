@@ -8,7 +8,7 @@ const ContactTracingRow = ({ name, phoneNumber, timestamp }: { name: string, pho
         bg="black"
         mt="md"
         rounded="xl"
-        h={72}
+        h={76}
         mb={5}>
             <Div
             pt={10}
@@ -19,7 +19,8 @@ const ContactTracingRow = ({ name, phoneNumber, timestamp }: { name: string, pho
                 color="white"
                 fontWeight="500"
                 fontSize="2xl"
-                textAlign="left">
+                textAlignVertical="top"
+                lineHeight={25}>
                     {name}
                 </Text>
                 <Text
@@ -27,7 +28,8 @@ const ContactTracingRow = ({ name, phoneNumber, timestamp }: { name: string, pho
                 color="white"
                 fontWeight="200"
                 fontSize="xl"
-                textAlign="right">
+                textAlignVertical="top"
+                lineHeight={25}>
                     {phoneNumber}
                 </Text>
             </Div>
@@ -36,7 +38,8 @@ const ContactTracingRow = ({ name, phoneNumber, timestamp }: { name: string, pho
             pt={5}
             pl={20}
             fontWeight="200"
-            fontSize="xl">
+            fontSize="xl"
+            lineHeight={25}>
                 {format(timestamp, "MMM. Io 'at' h:mm aa")}
             </Text>
         </Div>

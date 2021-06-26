@@ -12,7 +12,7 @@ const CloseContactTracingModalButton = ({ setModalVisibility }: { setModalVisibi
                 <Icon 
                 name="ios-close-outline"
                 fontFamily="Ionicons"
-                fontSize={32}
+                fontSize={24}
                 color="white"
                 />
             </Button>
