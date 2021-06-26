@@ -1,11 +1,11 @@
 import React from "react"
 import { SafeAreaView } from "react-native"
-import { Text } from "react-native-magnus"
+import QRCodeScanner from "./components/scanning/QRCodeScanner"
 
 const Index = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <Text>Hello, world!</Text>
+            <QRCodeScanner />
         </SafeAreaView>
     )
 }
