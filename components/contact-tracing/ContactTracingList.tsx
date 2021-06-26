@@ -1,26 +1,18 @@
 import React from "react"
+import { useState } from "react"
+import { useEffect } from "react"
 import { FlatList } from "react-native"
+import storage from "../../database"
 import ContactTracingRow from "./ContactTracingRow"
 import EmptyContactTracingListMessage from "./EmptyContactTracingListMessage"
 
 const ContactTracingList = () => {
-    let data: any[] = [
-        {
-            name: "JOHN DOE",
-            phoneNumber: "+1 (647) 555-5555",
-            timestamp: 1624679075707
-        },
-        {
-            name: "JANE DOE",
-            phoneNumber: "+1 (647) 555-5556",
-            timestamp: 1624670075407
-        },
-        {
-            name: "RICHARD DOE",
-            phoneNumber: "+1 (647) 555-5557",
-            timestamp: 1622479045407
-        }
-    ]
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        (async () => setData(await storage.getAllDataForKey('contactTracing')))()
+    }, [])
+
     return (
         <>
             {data.length > 0 ? 

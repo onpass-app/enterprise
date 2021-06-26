@@ -1,5 +1,6 @@
 import React from 'react'
 import { Div, Text } from "react-native-magnus"
+import ClearContactTracingListButton from './ClearContactTracingListButton'
 import CloseContactTracingModalButton from "./CloseContactTracingModalButton"
 
 const ContactTracingHeader = ({ setModalVisibility } : { setModalVisibility: any }) => {
@@ -15,6 +16,7 @@ const ContactTracingHeader = ({ setModalVisibility } : { setModalVisibility: any
             fontSize="5xl">
                 Contact Tracing
             </Text>
+            <ClearContactTracingListButton />
             <CloseContactTracingModalButton setModalVisibility={setModalVisibility} />
         </Div>
     )

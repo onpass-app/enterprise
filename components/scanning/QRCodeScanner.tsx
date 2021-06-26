@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { StyleSheet } from "react-native"
 import { Div } from "react-native-magnus";
+import { addToContactTracingList } from "../../database";
 import NoCameraPermissionMessage from "./NoCameraPermissionMessage"
 
 const QRCodeScanner = ({ shouldScan, setShouldScan }: { shouldScan: boolean, setShouldScan: any }) => {
@@ -26,8 +27,9 @@ const QRCodeScanner = ({ shouldScan, setShouldScan }: { shouldScan: boolean, set
             style={{ ...StyleSheet.absoluteFillObject, justifyContent: "center" } }
             onBarCodeScanned={!shouldScan ? undefined : ({ type, data }: { type: any, data: string }) => {
                 setShouldScan(false)
-                alert(`Scanned QR Code, Found type ${type} with data ${data}`)}
-            }>
+                addToContactTracingList(JSON.parse(data))
+                alert("Success! Added to contact tracing list.")
+            }}>
                 <Div
                 alignSelf="center"
                 borderWidth={10}
