@@ -23,7 +23,7 @@ const ContactTracingList = () => {
     ]
     return (
         <>
-            {data.length < 0 ? 
+            {data.length > 0 ? 
                 <FlatList
                 data={data}
                 keyExtractor={(_, index) => `person-${index}`}
