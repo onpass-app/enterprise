@@ -10,11 +10,15 @@ const storage = new Storage({
     enableCache: true
 })
 
-export const addToContactTracingList = (person: { name: string, phoneNumber: string, timestamp: number }) => {
+export const addToContactTracingList = ({ name, phoneNumber, timestamp = Date.now() }: { name: string, phoneNumber: string, timestamp: number }) => {
     (async () => await storage.save({
         key: 'contactTracing',
         id: uuid(),
-        data: person
+        data: {
+            name,
+            phoneNumber,
+            timestamp
+        }
     }))()
 }
 

@@ -1,5 +1,8 @@
 import React from "react"
+import { useEffect } from "react"
+import { useState } from "react"
 import { Modal } from "react-native-magnus"
+import { clearContactTracingList } from "../../database"
 import ContactTracingHeader from "./ContactTracingHeader"
 import ContactTracingList from "./ContactTracingList"
 
