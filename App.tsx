@@ -1,8 +1,9 @@
-import React from 'react';
-import { AppRegistry } from 'react-native';
-import { ThemeProvider } from 'react-native-magnus';
-import Index from './Index';
+import React from "react"
+import { AppRegistry } from "react-native"
+import { ThemeProvider } from "react-native-magnus"
+import Index from "./Index"
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const App = () => {
   return (
     <ThemeProvider>
@@ -11,6 +12,6 @@ const App = () => {
   )
 }
 
-AppRegistry.registerComponent('App' , () => App)
+AppRegistry.registerComponent("App", () => App)
 
 export default App
